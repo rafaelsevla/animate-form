@@ -131,7 +131,8 @@ form.validate-error {
 }
 
 @keyframes nono {
-  0% 100% {
+  0%,
+  100% {
     transform: translateX(0);
   }
   35% {
@@ -139,5 +140,33 @@ form.validate-error {
   }
   70% {
     transform: translateX(15%);
+  }
+}
+
+body {
+  overflow: hidden;
+}
+
+.squares li {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: block;
+  position: absolute;
+  bottom: -40px;
+  animation: up 2s infinite alternate;
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-1000px) rotate(960deg);
   }
 }
