@@ -68,8 +68,35 @@ form .btn-login {
 }
 
 form {
-  animation-name: fade;
-  animation-duration: 2s;
+  overflow: hidden;
+  animation: fade 0.2s;
+}
+
+form .input-block {
+  animation: move 2s;
+}
+
+form .input-block:nth-child(2) {
+  animation: move 2s;
+  animation-delay: 150ms;
+  animation-fill-mode: backwards;
+}
+
+form .btn-login {
+  animation: move 2s;
+  animation-delay: 250ms;
+  animation-fill-mode: backwards;
+}
+
+@keyframes move {
+  from {
+    opacity: 0;
+    transform: translateX(-35%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 
 @keyframes fade {
